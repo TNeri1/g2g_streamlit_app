@@ -24,7 +24,7 @@ def streamlit_menu(example=1):
         with st.sidebar:
             selected = option_menu(
                 menu_title="Main Menu",  # required
-                options=["Home", "Traffic", "Population"],  # required
+                options=["Fuel Sales", "Traffic", "Population"],  # required
                 icons=["house", "stoplights", "people"],  # optional
                 menu_icon="cast",  # optional
                 default_index=0,  # optional
@@ -34,14 +34,20 @@ def streamlit_menu(example=1):
 
 selected = streamlit_menu(example=EXAMPLE_NO)
 
-if selected == "Home":
+if selected == "Fuel Sales":
     st.title(f"{selected}")
     st.write(df)
+    st.write("This is a feature we designed calculating the average distance a person travelled in a tract to different points of interest in a tract estimating how much they drive")
+    st.image('streamlit-multipage-app-example\images\Distance and Fuel Sales.png')
+
+    st.write('The 2022 Median Income within each tract to how many fuel sales/assets occurred in that tract')
+    st.image('streamlit-multipage-app-example\images\Income and Fuel Sales.png')
+
+
 if selected == "Traffic":
     st.title(f"{selected}")
 
     # Relationship between g2g store distance from road and sales
-    
     st.plotly_chart(fig, use_container_width= True)
 if selected == "Population":
     st.title(f"{selected}")
