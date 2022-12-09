@@ -7,8 +7,8 @@ import plotly.express as px
 # 1=sidebar menu, 2=horizontal menu, 3=horizontal menu w/ custom menu
 
 # Read Data
-df = pd.read_csv('streamlit-multipage-app-example\data_1.csv')
-df_1 = pd.read_csv('streamlit-multipage-app-example\g2g_distance_to_roads_sales_relationship.csv')
+df = pd.read_csv('data_1.csv')
+df_1 = pd.read_csv('g2g_distance_to_roads_sales_relationship.csv')
 
 # Create Plots
 fig = px.scatter_mapbox(df_1, lat="Lat", lon="Long", size = "NEAR_DIST_road", color = "avg_tract_fuel_sales", color_continuous_scale= [(0, "red"), (.5, "yellow"), (1, "green")], range_color=[0,700000], zoom=6, height=400)
@@ -24,8 +24,8 @@ def streamlit_menu(example=1):
         with st.sidebar:
             selected = option_menu(
                 menu_title="Main Menu",  # required
-                options=["Fuel Sales", "Traffic", "Population"],  # required
-                icons=["house", "stoplights", "people"],  # optional
+                options=["Dataset","Fuel Sales", "Traffic", "Population"],  # required
+                icons=["data","house", "stoplights", "people"],  # optional
                 menu_icon="cast",  # optional
                 default_index=0,  # optional
             )
@@ -34,14 +34,36 @@ def streamlit_menu(example=1):
 
 selected = streamlit_menu(example=EXAMPLE_NO)
 
-if selected == "Fuel Sales":
+if selected == "Dataset":
     st.title(f"{selected}")
     st.write(df)
+    st.write("""
+            Data Dictionary:
+            * tractcode
+            * State
+            * avg_tract_sales_volume_assets
+            * POPULATION_2020
+            * POP20_SQMI
+            * SQMI
+            * 2022_Median_Household_Income
+            * lat
+            * long
+            * total_population
+            * unemployed
+            * percent_unemployed
+            * med_income
+            * med_age
+            * avg_dist_traveled_per_person_from_tract_to_business_in_miles
+             """)
+
+if selected == "Fuel Sales":
+    st.title(f"{selected}")
+    
     st.write("This is a feature we designed calculating the average distance a person travelled in a tract to different points of interest in a tract estimating how much they drive")
-    st.image('streamlit-multipage-app-example\images\Distance and Fuel Sales.png')
+    st.image('images/Distance and Fuel Sales.png')
 
     st.write('The 2022 Median Income within each tract to how many fuel sales/assets occurred in that tract')
-    st.image('streamlit-multipage-app-example\images\Income and Fuel Sales.png')
+    st.image('images/Income and Fuel Sales.png')
 
 
 if selected == "Traffic":
