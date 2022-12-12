@@ -3,6 +3,7 @@ from streamlit_option_menu import option_menu
 import pandas as pd
 import plotly as plt
 import plotly.express as px
+import streamlit.components.v1 as components
 
 # 1=sidebar menu, 2=horizontal menu, 3=horizontal menu w/ custom menu
 
@@ -83,6 +84,18 @@ if selected == "Fuel Sales":
     st.write('Idaho Sales volume and Assets by Tract')
     st.image('images/Idaho sales volume.png')
 
+    st.write('Arizona sales volume and miles of highway')
+    st.image('images/Arizona sales volume and miles of highway.png')
+
+    st.write('Idaho sales volume and miles of highway')
+    st.image('images/Idaho sales volume and highway miles and points.png')
+
+    # THIS IS THE ARCGIS
+    st.write("Streamlit Docs Example iframe")
+    components.iframe("https://docs.streamlit.io/en/latest")
+    st.write("different iframe test")
+    components.iframe(src="https://byui.maps.arcgis.com/apps/instant/interactivelegend/index.html?appid=8fb52630cd9a4155badc57d1bad97629", width=1285, height=1000, scrolling=True)
+
 
 
 
@@ -111,11 +124,7 @@ if selected == "Population":
     st.write('Idaho sales volume and Median Household Income')
     st.image('images/Idaho sales volume and MHHI.png')
 
-    st.write('Arizona sales volume and miles of highway')
-    st.image('images/Arizona sales volume and miles of highway.png')
 
-    st.write('Idaho sales volume and miles of highway')
-    st.image('images/Idaho sales volume and highway miles and points.png')
 
 
 
