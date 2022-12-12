@@ -25,8 +25,8 @@ def streamlit_menu(example=1):
         with st.sidebar:
             selected = option_menu(
                 menu_title="Main Menu",  # required
-                options=["Dataset","Fuel Sales", "Traffic", "Population"],  # required
-                icons=["data","house", "stoplights", "people"],  # optional
+                options=["Dataset","Fuel Sales", "Traffic", "Population", "Interactive Map"],  # required
+                icons=["data","house", "stoplights", "people", "map"],  # optional
                 menu_icon="cast",  # optional
                 default_index=0,  # optional
             )
@@ -41,7 +41,6 @@ if selected == "Dataset":
     st.write("""
             Data Dictionary:
             * tractcode
-                * 
             * State
             * avg_tract_sales_volume_assets
             * POPULATION_2020
@@ -90,13 +89,7 @@ if selected == "Fuel Sales":
     st.write('Idaho sales volume and miles of highway')
     st.image('images/Idaho sales volume and highway miles and points.png')
 
-    # THIS IS THE ARCGIS
-    st.write("Streamlit Docs Example iframe")
-    components.iframe("https://docs.streamlit.io/en/latest")
-    st.write("different iframe test")
-    components.iframe(src="https://byui.maps.arcgis.com/apps/instant/interactivelegend/index.html?appid=8fb52630cd9a4155badc57d1bad97629", width=800, height=800, scrolling=True)
-
-
+   
 
 
 if selected == "Traffic":
@@ -124,6 +117,14 @@ if selected == "Population":
     st.write('Idaho sales volume and Median Household Income')
     st.image('images/Idaho sales volume and MHHI.png')
 
+
+if selected == "Interactive Map":
+     # THIS IS THE ARCGIS
+    # st.write("Streamlit Docs Example iframe")
+    # components.iframe("https://docs.streamlit.io/en/latest")
+    # st.write("different iframe test")
+    st.title(f'{selected}')
+    components.iframe(src="https://byui.maps.arcgis.com/apps/instant/interactivelegend/index.html?appid=8fb52630cd9a4155badc57d1bad97629", width=1000, height=800, scrolling=True)
 
 
 
