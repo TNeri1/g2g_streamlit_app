@@ -70,6 +70,9 @@ if selected == "Fuel Sales":
     st.write('The 2022 Median Income within each tract to how many fuel sales/assets occurred in that tract')
     st.image('images/Income and Fuel Sales.png')
 
+    st.write('Test')
+    st.image('images/Arizona sales volume and count of gas stations.png')
+
 
 if selected == "Traffic":
     st.title(f"{selected}")
