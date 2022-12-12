@@ -94,7 +94,7 @@ if selected == "Fuel Sales":
     st.write("Streamlit Docs Example iframe")
     components.iframe("https://docs.streamlit.io/en/latest")
     st.write("different iframe test")
-    components.iframe(src="https://byui.maps.arcgis.com/apps/instant/interactivelegend/index.html?appid=8fb52630cd9a4155badc57d1bad97629", width=1285, height=1000, scrolling=True)
+    components.iframe(src="https://byui.maps.arcgis.com/apps/instant/interactivelegend/index.html?appid=8fb52630cd9a4155badc57d1bad97629", width=800, height=800, scrolling=True)
 
 
 
