@@ -70,7 +70,7 @@ if selected == "Fuel Sales":
     st.write('The 2022 Median Income within each tract to how many fuel sales/assets occurred in that tract')
     st.image('images/Income and Fuel Sales.png')
 
-    st.title("Mapbox")
+    st.title("Data Axle")
     st.write('Arizona sales volume and count of gas stations')
     st.image('images/Arizona sales volume and count of gas stations.png')
 
@@ -93,7 +93,7 @@ if selected == "Traffic":
     st.plotly_chart(fig, use_container_width= True)
 
 
-    st.title("Mapbox")
+    st.title("Data Axle")
     st.write('Arizona Total Highway Miles by Tract')
     st.image('images/Arizona_Total_Highway_Miles_tract.png')
 
@@ -104,7 +104,7 @@ if selected == "Traffic":
 if selected == "Population":
     st.title(f"{selected}")
 
-    st.title("Mapbox")
+    st.title("Data Axle")
     st.write('Arizona sales volume and Median Household Income')
     st.image('images/Arizona sales volume and MHHI.png')
 
