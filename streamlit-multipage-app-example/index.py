@@ -73,9 +73,11 @@ if selected == "Fuel Sales":
     st.title("Data Axle")
     st.write('Arizona sales volume and count of gas stations')
     st.image('images/Arizona sales volume and count of gas stations.png')
+    st.image('images/az_sales_volume.png')
 
     st.write('Idaho sales volume and count of gas stations')
     st.image('images/Idaho sales volume and count of gas stations.png')
+    st.image('images/idaho_sales_volume.png')
 
     st.write('Arizona Sales Volume by Tract')
     st.image('images/Arizona Sales Volume by Tract.png')
@@ -85,9 +87,11 @@ if selected == "Fuel Sales":
 
     st.write('Arizona sales volume and miles of highway')
     st.image('images/Arizona sales volume and miles of highway.png')
+    st.image('images/az_high.png')
 
     st.write('Idaho sales volume and miles of highway')
     st.image('images/Idaho sales volume and highway miles and points.png')
+    st.image('images/idaho_high.png')
 
    
 
@@ -113,9 +117,11 @@ if selected == "Population":
     st.title("Data Axle")
     st.write('Arizona sales volume and Median Household Income')
     st.image('images/Arizona sales volume and MHHI.png')
+    st.image('images/az_median.png')
 
     st.write('Idaho sales volume and Median Household Income')
     st.image('images/Idaho sales volume and MHHI.png')
+    st.image('images/Idaho_median.png')
 
 
 if selected == "Interactive Map":
