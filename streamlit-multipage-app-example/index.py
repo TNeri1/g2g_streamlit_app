@@ -7,7 +7,7 @@ import plotly.express as px
 # 1=sidebar menu, 2=horizontal menu, 3=horizontal menu w/ custom menu
 
 # Read Data
-df = pd.read_csv('data_1.csv')
+df = pd.read_csv('data_2.csv')
 df_1 = pd.read_csv('g2g_distance_to_roads_sales_relationship.csv')
 
 # Create Plots
@@ -40,6 +40,7 @@ if selected == "Dataset":
     st.write("""
             Data Dictionary:
             * tractcode
+                * 
             * State
             * avg_tract_sales_volume_assets
             * POPULATION_2020
@@ -54,6 +55,10 @@ if selected == "Dataset":
             * med_income
             * med_age
             * avg_dist_traveled_per_person_from_tract_to_business_in_miles
+            * count_gas_stations
+            * avg_gas_station_visits_on_weekday
+            * avg_gas_station_visits_on_weekend
+            * land_m
              """)
 
 if selected == "Fuel Sales":
