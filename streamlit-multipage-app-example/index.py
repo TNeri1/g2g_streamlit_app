@@ -70,8 +70,20 @@ if selected == "Fuel Sales":
     st.write('The 2022 Median Income within each tract to how many fuel sales/assets occurred in that tract')
     st.image('images/Income and Fuel Sales.png')
 
-    st.write('Test')
+    st.title("Mapbox")
+    st.write('Arizona sales volume and count of gas stations')
     st.image('images/Arizona sales volume and count of gas stations.png')
+
+    st.write('Idaho sales volume and count of gas stations')
+    st.image('images/Idaho sales volume and count of gas stations.png')
+
+    st.write('Arizona Sales Volume by Tract')
+    st.image('images/Arizona Sales Volume by Tract.png')
+
+    st.write('Idaho Sales volume and Assets by Tract')
+    st.image('images/Idaho sales volume.png')
+
+
 
 
 if selected == "Traffic":
@@ -79,5 +91,32 @@ if selected == "Traffic":
 
     # Relationship between g2g store distance from road and sales
     st.plotly_chart(fig, use_container_width= True)
+
+
+    st.title("Mapbox")
+    st.write('Arizona Total Highway Miles by Tract')
+    st.image('images/Arizona_Total_Highway_Miles_tract.png')
+
+    st.write('Idaho Total Highway Miles by Tract')
+    st.image('images/Idaho_Highway_miles_tract.png')
+
+
 if selected == "Population":
     st.title(f"{selected}")
+
+    st.title("Mapbox")
+    st.write('Arizona sales volume and Median Household Income')
+    st.image('images/Arizona sales volume and MHHI.png')
+
+    st.write('Idaho sales volume and Median Household Income')
+    st.image('images/Idaho sales volume and MHHI.png')
+
+    st.write('Arizona sales volume and miles of highway')
+    st.image('images/Arizona sales volume and miles of highway.png')
+
+    st.write('Idaho sales volume and miles of highway')
+    st.image('images/Idaho sales volume and highway miles and points.png')
+
+
+
+
